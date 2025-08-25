@@ -4,10 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:whats_app_clone/core/theme/theme.dart';
 import 'package:whats_app_clone/core/router/app_router.dart';
 
-class WhatsApp extends StatelessWidget {
-  const WhatsApp({super.key});
-
-  // This widget is the root of your application.
+class WhatsAppClone extends StatelessWidget {
+  const WhatsAppClone({super.key});
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(

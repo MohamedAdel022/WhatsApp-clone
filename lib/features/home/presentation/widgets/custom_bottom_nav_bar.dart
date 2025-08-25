@@ -20,8 +20,8 @@ class CustomBottomNavBar extends StatelessWidget {
         label: 'Chats',
       ),
       NavBarItemEntity(
-        icon: FontAwesomeIcons.phone,
-        selectedIcon: FontAwesomeIcons.phone,
+        icon: Icons.settings_outlined,
+        selectedIcon: Icons.settings,
         label: 'Updates',
       ),
       NavBarItemEntity(
@@ -30,8 +30,8 @@ class CustomBottomNavBar extends StatelessWidget {
         label: 'Communities',
       ),
       NavBarItemEntity(
-        icon: FontAwesomeIcons.gear,
-        selectedIcon: FontAwesomeIcons.gear,
+        icon: Icons.phone_outlined,
+        selectedIcon: Icons.phone,
         label: 'Calls',
       ),
     ];

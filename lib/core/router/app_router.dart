@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:whats_app_clone/core/router/routes.dart';
+import 'package:whats_app_clone/features/chats/presentation/views/chat_view.dart';
 import 'package:whats_app_clone/features/chats/presentation/views/chats_view.dart';
 import 'package:whats_app_clone/features/home/presentation/views/home_view.dart';
 import 'package:whats_app_clone/features/updates/presentation/views/updates_view.dart';
@@ -36,6 +37,11 @@ class AppRouter {
             builder: (context, state) => const Center(child: Text("📞 Calls")),
           ),
         ],
+      ),
+      GoRoute(
+        path: Routes.chat,
+        name: 'chat',
+        builder: (context, state) => const ChatView(),
       ),
     ],
   );

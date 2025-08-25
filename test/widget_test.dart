@@ -8,12 +8,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:whats_app_clone/whats_app.dart';
+import 'package:whats_app_clone/whats_app_clone.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(const WhatsApp());
+    await tester.pumpWidget(const WhatsAppClone());
 
     // Verify that our counter starts at 0.
     expect(find.text('0'), findsOneWidget);
