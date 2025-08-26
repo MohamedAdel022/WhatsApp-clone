@@ -5,14 +5,6 @@ It demonstrates production-quality UI, clean architecture, and attention to deta
 
 ---
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/e0e6bb5f-1487-4527-9dc8-2a0b71b7ce89" width="180" />
-  <img src="https://github.com/user-attachments/assets/6935e3ab-6d58-437d-8400-32cfd7ad23a9" width="180" />
-  <img src="https://github.com/user-attachments/assets/7a2b85d5-7cd5-461a-a6b5-3ef23a9edb2e" width="180" />
-</p>
-
----
-
 ## ✨ Features
 - **Main Screens**
   - Home (Chat List)
