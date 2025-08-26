@@ -22,6 +22,10 @@ class Assets {
   /// assets/status_test.jpeg
   static const String statusTest = "assets/status_test.jpeg";
 
+  /// Assets for stauts2Test
+  /// assets/stauts2_test.png
+  static const String stauts2Test = "assets/stauts2_test.png";
+
   /// Assets for temp
   /// assets/temp.png
   static const String temp = "assets/temp.png";

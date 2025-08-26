@@ -16,7 +16,7 @@ class WhatsAppClone extends StatelessWidget {
         locale: DevicePreview.locale(context),
         builder: DevicePreview.appBuilder,
         debugShowCheckedModeBanner: false,
-        theme: AppTheme.light,
+        theme: AppTheme.dark,
         darkTheme: AppTheme.dark,
         themeMode: ThemeMode.system,
         routerConfig: AppRouter.router,

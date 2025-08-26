@@ -9,6 +9,7 @@ class StoryView extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.black,
+        resizeToAvoidBottomInset: false,
         body: const StoryViewBody(),
       ),
     );
