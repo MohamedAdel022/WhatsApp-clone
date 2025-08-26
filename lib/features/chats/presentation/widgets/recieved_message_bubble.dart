@@ -29,7 +29,7 @@ class ReceivedMessageBubble extends StatelessWidget {
             ),
             child: Container(
               padding: EdgeInsets.fromLTRB(20, 8, 12, 8),
-              child: _buildMessageWithTime(),
+              child: _buildMessageWithTime(context),
             ),
           ),
         ),
@@ -37,50 +37,47 @@ class ReceivedMessageBubble extends StatelessWidget {
     );
   }
 
-  Widget _buildMessageWithTime() {
-    return _shouldUseStackLayout() ? _buildStackLayout() : _buildInlineLayout();
+  Widget _buildMessageWithTime(BuildContext context) {
+    return _shouldUseStackLayout()
+        ? _buildStackLayout(context)
+        : _buildInlineLayout(context);
   }
 
   bool _shouldUseStackLayout() {
     return message.length > 20;
   }
 
-  Widget _buildInlineLayout() {
+  Widget _buildInlineLayout(BuildContext context) {
     return Row(
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.end,
       children: [
-        Flexible(
-          child: Text(
-            message,
-            style: const TextStyle(fontSize: 16),
-          ),
-        ),
+        Flexible(child: Text(message, style: const TextStyle(fontSize: 16))),
         const SizedBox(width: 8),
-        _buildTimeOnly(),
+        _buildTimeOnly(context),
       ],
     );
   }
 
-  Widget _buildStackLayout() {
+  Widget _buildStackLayout(BuildContext context) {
     return Stack(
       children: [
         Padding(
           padding: const EdgeInsets.only(bottom: 20),
-          child: Text(
-            message,
-            style: const TextStyle(fontSize: 16),
-          ),
+          child: Text(message, style: const TextStyle(fontSize: 16)),
         ),
-        Positioned(bottom: 0, right: 0, child: _buildTimeOnly()),
+        Positioned(bottom: 0, right: 0, child: _buildTimeOnly(context)),
       ],
     );
   }
 
-  Widget _buildTimeOnly() {
+  Widget _buildTimeOnly(BuildContext context) {
     return Text(
       time,
-      style: const TextStyle(color: Colors.white70, fontSize: 12),
+      style: TextStyle(
+        color: isDarkMode(context) ? Colors.white70 : Colors.black54,
+        fontSize: 12,
+      ),
     );
   }
 }
