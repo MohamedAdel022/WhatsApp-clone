@@ -4,12 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
-import 'package:whats_app_clone/core/utils/assets.dart';
+import 'package:whats_app_clone/features/chats/domin/entities/chat_entity.dart';
 import 'package:whats_app_clone/features/chats/presentation/widgets/chat_view_body.dart';
 
 class ChatView extends StatelessWidget {
-  const ChatView({super.key});
-
+  const ChatView({super.key, required this.chat});
+  final ChatEntity chat;
   @override
   Widget build(BuildContext context) {
     return Scaffold(appBar: _buildAppBar(context), body: ChatViewBody());
@@ -36,7 +36,9 @@ class ChatView extends StatelessWidget {
 
           CircleAvatar(
             radius: 16,
-            child: ClipOval(child: Image.asset(Assets.temp, fit: BoxFit.cover)),
+            child: ClipOval(
+              child: Image.asset(chat.avatarUrl, fit: BoxFit.cover),
+            ),
           ),
           SizedBox(width: 6),
           Expanded(
@@ -48,7 +50,7 @@ class ChatView extends StatelessWidget {
                 height: double.infinity,
                 alignment: Alignment.centerLeft,
                 child: Text(
-                  'Mohamed',
+                  chat.name,
                   style: TextStyle(
                     fontSize: 18.sp,
                     fontWeight: FontWeight.bold,

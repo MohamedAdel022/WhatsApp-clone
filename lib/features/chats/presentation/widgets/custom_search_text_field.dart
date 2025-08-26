@@ -17,7 +17,7 @@ class CustomSearchTextField extends StatelessWidget {
         hintText: 'Ask Meta Al or Search',
         prefixIcon: FittedBox(
           fit: BoxFit.scaleDown,
-          child: focusNode!.hasFocus
+          child: (focusNode?.hasFocus ?? false)
               ? InkWell(onTap: () {
                   focusNode?.unfocus();
                 }, child: Icon(Icons.arrow_back))

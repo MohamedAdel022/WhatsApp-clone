@@ -42,15 +42,19 @@ class _AnimatedSearchTextFieldState extends State<AnimatedSearchTextField>
       _animationController.forward();
       // Transfer focus to overlay text field
       WidgetsBinding.instance.addPostFrameCallback((_) {
-        _searchFocusNode.unfocus();
-        _overlaySearchFocusNode.requestFocus();
+        if (mounted) {
+          _searchFocusNode.unfocus();
+          _overlaySearchFocusNode.requestFocus();
+        }
       });
     } else if (!_overlaySearchFocusNode.hasFocus && _isSearchFocused) {
       setState(() {
         _isSearchFocused = false;
       });
       _animationController.reverse().then((_) {
-        _hideOverlay();
+        if (mounted) {
+          _hideOverlay();
+        }
       });
     }
   }

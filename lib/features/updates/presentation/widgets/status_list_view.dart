@@ -10,13 +10,16 @@ class StatusListView extends StatelessWidget {
     return SizedBox(
       height: 150.h, // Set a fixed height for horizontal scrolling
       child: ListView.builder(
+        padding: EdgeInsets.symmetric(horizontal: 13),
         scrollDirection: Axis.horizontal,
         itemCount: 5,
         itemBuilder: (context, index) {
-          return StatusCardItem();
+          return Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 3.0),
+            child: StatusCardItem(onTap: () {}),
+          );
         },
       ),
     );
   }
 }
-
