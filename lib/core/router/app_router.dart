@@ -5,6 +5,7 @@ import 'package:whats_app_clone/features/chats/domin/entities/chat_entity.dart';
 import 'package:whats_app_clone/features/chats/presentation/views/chat_view.dart';
 import 'package:whats_app_clone/features/chats/presentation/views/chats_view.dart';
 import 'package:whats_app_clone/features/home/presentation/views/home_view.dart';
+import 'package:whats_app_clone/features/updates/presentation/views/story_view.dart';
 import 'package:whats_app_clone/features/updates/presentation/views/updates_view.dart';
 
 class AppRouter {
@@ -45,6 +46,13 @@ class AppRouter {
         builder: (context, state) {
           final chat = state.extra as ChatEntity;
           return ChatView(chat: chat);
+        },
+      ),
+      GoRoute(
+        path: Routes.story,
+        name: 'story',
+        builder: (context, state) {
+          return const StoryView();
         },
       ),
     ],

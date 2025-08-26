@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
+import 'package:whats_app_clone/core/router/routes.dart';
 import 'package:whats_app_clone/features/updates/presentation/widgets/status_card_item.dart';
 
 class StatusListView extends StatelessWidget {
@@ -16,7 +18,12 @@ class StatusListView extends StatelessWidget {
         itemBuilder: (context, index) {
           return Padding(
             padding: const EdgeInsets.symmetric(horizontal: 3.0),
-            child: StatusCardItem(onTap: () {}),
+            child: StatusCardItem(
+              onTap: () {
+                // Navigate to story view
+               context.push(Routes.story);
+              },
+            ),
           );
         },
       ),

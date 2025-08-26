@@ -1,12 +1,12 @@
 sealed class ChannelEntity {
   final String id;
   final String name;
-  final String avatarUrl;
+  final String? avatarUrl;
 
   ChannelEntity({
     required this.id,
     required this.name,
-    required this.avatarUrl,
+     this.avatarUrl,
   });
 }
 

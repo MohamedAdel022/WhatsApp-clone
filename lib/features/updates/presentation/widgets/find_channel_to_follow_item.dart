@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:whats_app_clone/core/extensions/number_formatter.dart';
 import 'package:whats_app_clone/core/theme/app_colors.dart';
+import 'package:whats_app_clone/core/utils/assets.dart';
 import 'package:whats_app_clone/core/utils/functions/is_dark_mode.dart';
 import 'package:whats_app_clone/features/updates/domin/enities/channel_entity.dart';
 
@@ -19,7 +20,7 @@ class FindChannelToFollowItem extends StatelessWidget {
       leading: CircleAvatar(
         radius: 26.r,
         backgroundColor: Colors.grey.shade300,
-        backgroundImage: AssetImage(channel.avatarUrl),
+        backgroundImage: AssetImage(channel.avatarUrl?? Assets.channalTemp),
       ),
       title: Text(
         channel.name,
